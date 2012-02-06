@@ -6,6 +6,7 @@
 *.exe
 *.o
 *.so
+*/target
 
 # Packages #
 ############
@@ -31,3 +32,11 @@
 ehthumbs.db
 Icon?
 Thumbs.db
+
+# Remove IDE files #
+####################
+*.idea
+*.classpath
+*.project
+*.settings
+*.iml
