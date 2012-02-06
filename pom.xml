@@ -7,6 +7,7 @@
     <packaging>pom</packaging>
     <name>Code Samples Parent POM</name>
     <description>A selection of code samples and ideas from blog posts.</description>
+    <url>http://taintedlove.me.uk</url>
     <prerequisites>
         <maven>2.2.0</maven>
     </prerequisites>
