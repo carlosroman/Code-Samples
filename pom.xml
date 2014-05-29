@@ -83,8 +83,13 @@
     <properties>
         <!-- default versions -->
         <junit.version>4.11</junit.version>
-        <scala.version>2.11.1</scala.version>
-
+        <org.scala-lang.version>2.11.1</org.scala-lang.version>
+        <org.scalatest.version>2.1.7</org.scalatest.version>
+        <org.apache.camel.version>2.13.1</org.apache.camel.version>
+        <jaxb.version>2.2.7</jaxb.version>
+        <ch.qos.logback.version>1.1.2</ch.qos.logback.version>
+        <commons.lang3.version>3.1</commons.lang3.version>
+        <com.google.guava.version>17.0</com.google.guava.version>
         <!--  compiler settings -->
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
