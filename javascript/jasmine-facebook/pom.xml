@@ -2,11 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.cliche.corp</groupId>
+        <groupId>com.carlosroman.samples.javascript</groupId>
         <artifactId>javascript-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
-    <groupId>${project.parent.groupId}.javascript</groupId>
     <artifactId>jasmine-facebook</artifactId>
     <packaging>jar</packaging>
     <build>

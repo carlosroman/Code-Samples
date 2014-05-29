@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.cliche.corp</groupId>
+    <groupId>com.carlosroman.samples</groupId>
     <artifactId>samples-parent</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Code Samples Parent POM</name>
     <description>A selection of code samples and ideas from blog posts.</description>
-    <url>http://taintedlove.me.uk</url>
+    <url>http://carlosroman.co.uk</url>
     <prerequisites>
-        <maven>2.2.0</maven>
+        <maven>3.1.0</maven>
     </prerequisites>
     <developers>
         <developer>
