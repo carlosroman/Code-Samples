@@ -6,12 +6,12 @@
         <artifactId>samples-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.carlosroman.samples.javascript</groupId>
-    <artifactId>javascript-parent</artifactId>
+    <groupId>com.carlosroman.samples.camel</groupId>
+    <artifactId>camel-parent</artifactId>
     <packaging>pom</packaging>
-    <name>Samples :: JavaScript</name>
-    <description>A selection of JavaScript code samples and ideas from blog posts.</description>
+    <name>Samples :: Apache Camel</name>
+    <description>A selection of Apache Camel code samples and ideas from blog posts.</description>
     <modules>
-        <module>jasmine-facebook</module>
+        <module>camel-scala-jaxb</module>
     </modules>
 </project>

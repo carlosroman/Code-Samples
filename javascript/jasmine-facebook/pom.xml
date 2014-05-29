@@ -6,6 +6,7 @@
         <artifactId>javascript-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
+    <name>Samples :: Jasmine Facebook mock</name>
     <artifactId>jasmine-facebook</artifactId>
     <packaging>jar</packaging>
     <build>

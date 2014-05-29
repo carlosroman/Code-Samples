@@ -5,7 +5,7 @@
     <artifactId>samples-parent</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Code Samples Parent POM</name>
+    <name>Code Samples</name>
     <description>A selection of code samples and ideas from blog posts.</description>
     <url>http://carlosroman.co.uk</url>
     <prerequisites>
@@ -21,6 +21,7 @@
 
     <modules>
         <module>javascript</module>
+        <module>camel</module>
     </modules>
 
     <pluginRepositories>
