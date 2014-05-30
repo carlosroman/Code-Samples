@@ -6,7 +6,7 @@ import org.apache.camel.model.DataFormatDefinition
 import org.apache.camel.converter.jaxb.JaxbDataFormat
 import org.apache.camel.spi.DataFormat
 
-class SimpleRoute(fromUri: String, toUri: String) extends RouteBuilder {
+class SimpleJaxbRoute(fromUri: String, toUri: String) extends RouteBuilder {
 
   val format: DataFormat = new JaxbDataFormat("com.carlosroman.samples.camel.jaxb.domain")
   val formatDefinition: DataFormatDefinition = new DataFormatDefinition(format)

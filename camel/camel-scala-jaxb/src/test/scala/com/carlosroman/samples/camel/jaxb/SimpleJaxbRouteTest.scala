@@ -7,15 +7,15 @@ import com.carlosroman.samples.camel.jaxb.domain.DomainObject.Builder
 import org.apache.camel.component.mock.MockEndpoint
 import org.slf4j.LoggerFactory
 
-class SimpleRouteTest extends FunSuite with Matchers with BeforeAndAfter with OneInstancePerTest {
-  def LOG = LoggerFactory.getLogger(classOf[SimpleRouteTest])
+class SimpleJaxbRouteTest extends FunSuite with Matchers with BeforeAndAfter with OneInstancePerTest {
+  def LOG = LoggerFactory.getLogger(classOf[SimpleJaxbRouteTest])
   val fromUri = "direct:start"
   val toUri = "mock:end"
   val camelContext = new DefaultCamelContext(new SimpleRegistry)
 
   before {
     camelContext.disableJMX()
-    camelContext.addRoutes(new SimpleRoute(fromUri, toUri))
+    camelContext.addRoutes(new SimpleJaxbRoute(fromUri, toUri))
     camelContext.start()
   }
 
