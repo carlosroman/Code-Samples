@@ -13,5 +13,6 @@
     <description>A selection of Apache Camel code samples and ideas from blog posts.</description>
     <modules>
         <module>camel-scala-jaxb</module>
+        <module>camel-scala-jackson</module>
     </modules>
 </project>

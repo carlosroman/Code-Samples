@@ -111,6 +111,11 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-jackson</artifactId>
+                <version>${org.apache.camel.version}</version>
+            </dependency>
 
             <!-- logback -->
             <dependency>
