@@ -165,6 +165,45 @@
                 <version>${jaxb.version}</version>
             </dependency>
 
+            <!-- json -->
+            <dependency>
+                <groupId>org.json4s</groupId>
+                <artifactId>json4s-core_${scala.version}</artifactId>
+                <version>${org.json4s.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.scala-lang</groupId>
+                        <artifactId>scala-library</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.json4s</groupId>
+                <artifactId>json4s-native_${scala.version}</artifactId>
+                <version>${org.json4s.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.scala-lang</groupId>
+                        <artifactId>scala-library</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.json4s</groupId>
+                <artifactId>json4s-jackson_${scala.version}</artifactId>
+                <version>${org.json4s.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.fasterxml.jackson.core</groupId>
+                        <artifactId>jackson-databind</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.scala-lang</groupId>
+                        <artifactId>scala-library</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
             <!-- jackson -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -178,8 +217,14 @@
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
-                <artifactId>jackson-module-scala_2.11</artifactId>
+                <artifactId>jackson-module-scala_${scala.version}</artifactId>
                 <version>${com.fasterxml.jackson.core.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.scala-lang</groupId>
+                        <artifactId>scala-library</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <!-- Scala -->
@@ -191,7 +236,7 @@
             </dependency>
             <dependency>
                 <groupId>org.scalatest</groupId>
-                <artifactId>scalatest_2.11</artifactId>
+                <artifactId>scalatest_${scala.version}</artifactId>
                 <version>${org.scalatest.version}</version>
                 <scope>test</scope>
                 <!-- exclude scala compiler so we can control which version we are using -->
@@ -221,7 +266,8 @@
     <properties>
         <!-- default versions -->
         <junit.version>4.11</junit.version>
-        <org.scala-lang.version>2.11.1</org.scala-lang.version>
+        <scala.version>2.11</scala.version>
+        <org.scala-lang.version>${scala.version}.1</org.scala-lang.version>
         <org.scalatest.version>2.1.7</org.scalatest.version>
         <org.apache.camel.version>2.13.1</org.apache.camel.version>
         <jaxb.version>2.2.7</jaxb.version>
@@ -234,5 +280,6 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <org.json4s.version>3.2.10</org.json4s.version>
     </properties>
 </project>

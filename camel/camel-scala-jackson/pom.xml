@@ -55,9 +55,14 @@
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-scala_2.11</artifactId>
+            <artifactId>jackson-module-scala_${scala.version}</artifactId>
         </dependency>
 
+        <!-- JSON -->
+        <dependency>
+            <groupId>org.json4s</groupId>
+            <artifactId>json4s-jackson_${scala.version}</artifactId>
+        </dependency>
 
         <!-- Scala -->
         <dependency>
@@ -66,7 +71,7 @@
         </dependency>
         <dependency>
             <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_2.11</artifactId>
+            <artifactId>scalatest_${scala.version}</artifactId>
         </dependency>
     </dependencies>
     <build>
