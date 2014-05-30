@@ -29,13 +29,13 @@ class SimpleJacksonRouteTest extends FunSuite with Matchers with BeforeAndAfter 
   }
 
   test("should create JSON from Scala Domain Object") {
-    val payload = DomainObject("value one")
+    val payload = DomainObject(Some("value one"))
     template sendBody(marshalFromUri, payload)
   }
 
 
   test("should create Scala Domain Object from JSON") {
-    val payload = DomainObject("value one")
+    val payload = DomainObject(Some("value one"))
     val endpoint = getMockEndpoint(toUri)
     endpoint.expectedBodiesReceived(payload)
     template sendBody(unmarshalFromUri, domainObjectJson)
