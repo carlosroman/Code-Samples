@@ -13,7 +13,6 @@ class SimpleJaxbRoute(fromUri: String, toUri: String) extends RouteBuilder {
 
   from(fromUri) ==> {
     unmarshal(formatDefinition)
-    to(toUri)
-  }
+  } to toUri
 
 }

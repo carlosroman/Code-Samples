@@ -9,9 +9,14 @@ import org.slf4j.LoggerFactory
 
 class SimpleJaxbRouteTest extends FunSuite with Matchers with BeforeAndAfter with OneInstancePerTest {
   def LOG = LoggerFactory.getLogger(classOf[SimpleJaxbRouteTest])
+
   val fromUri = "direct:start"
   val toUri = "mock:end"
   val camelContext = new DefaultCamelContext(new SimpleRegistry)
+
+  def getMockEndpoint(uri: String) = camelContext.getEndpoint(toUri, classOf[MockEndpoint])
+
+  def template = camelContext.createProducerTemplate
 
   before {
     camelContext.disableJMX()
@@ -29,10 +34,10 @@ class SimpleJaxbRouteTest extends FunSuite with Matchers with BeforeAndAfter wit
     builder withValueTwo "value two"
     val domainObject: DomainObject = builder.build()
 
-    val endpoint: MockEndpoint = camelContext.getEndpoint(toUri, classOf[MockEndpoint])
+    val endpoint = getMockEndpoint(toUri)
     endpoint.expectedBodiesReceived(domainObject)
 
-    camelContext.createProducerTemplate().sendBody(fromUri, domainObjectXml)
+    template sendBody(fromUri, domainObjectXml)
     endpoint.assertIsSatisfied()
   }
 
@@ -42,7 +47,7 @@ class SimpleJaxbRouteTest extends FunSuite with Matchers with BeforeAndAfter wit
     val endpoint: MockEndpoint = camelContext.getEndpoint(toUri, classOf[MockEndpoint])
     endpoint.expectedBodiesReceived(domainObject)
 
-    camelContext.createProducerTemplate().sendBody(fromUri, domainObjXml)
+    template sendBody(fromUri, domainObjXml)
     LOG.info("Expecting {}", domainObject)
     endpoint.assertIsSatisfied()
   }
